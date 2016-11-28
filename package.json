@@ -1,0 +1,23 @@
+{
+  "name": "bms",
+  "version": "1.0.0",
+  "description": "BMS API",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
+    "mongoose": "*",
+    "requestify": "^0.2.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Chaelgutierrez",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.10.2"
+  }
+}
