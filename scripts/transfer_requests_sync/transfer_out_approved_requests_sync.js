@@ -19,7 +19,12 @@ app.get('/api/store/:store_id/transfer/out',function(req,res){
                   res.json(err); //Erorr Response
                 }
                 else{
-                  res.json(data[0].transferOARdata); // Final Response
+                  try{
+                      res.json(data[0].transferOARdata); // Final Response
+                  }catch(err){
+                      console.log(err);
+                      res.json([]); //Erorr Response
+                  }
                 }
               });
             }

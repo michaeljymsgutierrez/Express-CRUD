@@ -19,7 +19,12 @@ app.get('/api/store/:store_id/commissary/order',function(req,res){
                   res.json(err); //Erorr Response
                 }
                 else{
-                  res.json(data[0].commissary_AOR_data); // Final Response
+                  try{
+                      res.json(data[0].commissary_AOR_data); // Final Response
+                  }catch(err){
+                      console.log(err);
+                      res.json([]); //Error Response
+                  }
                 }
               });
             }

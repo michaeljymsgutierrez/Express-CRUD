@@ -63,7 +63,7 @@ app.post('/api/store/:store_id/cashier/items',function(req,res){
 app.put('/api/store/:store_id/cashier/items',function(req,res){
     var storeId = req.params.store_id;
     var data = req.body;
-    var updateData = { store_id: storeId, employee_data: data };
+    var updateData = { store_id: storeId, cashier_item_data: data };
     Cashier_item.updateData(storeId,updateData,{},function(err,updateData){
         if(err){
            console.log(err);

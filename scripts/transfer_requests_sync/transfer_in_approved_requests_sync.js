@@ -19,7 +19,12 @@ app.get('/api/store/:store_id/transfer/in',function(req,res){
                   res.json(err); //Erorr Response
                 }
                 else{
-                  res.json(data[0].transferIARdata); // Final Response
+                  try{
+                      res.json(data[0].transferIARdata); // Final Response
+                  }catch(err){
+                      console.log(err);
+                      res.json([]); //Erorr Response
+                  }
                 }
               });
             }
